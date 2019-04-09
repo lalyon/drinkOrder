@@ -1,0 +1,126 @@
+*
+{
+    box-sizing:border-box;
+}
+
+html,body
+{
+    font-size:18px;
+    width:100%;
+    height:100%;
+    padding:0;
+    margin:0;
+    font-family:Helvetica, Arial, sans-serif;
+}
+body
+{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    background:#efefef;
+}
+
+footer
+{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+  font-size: 10px;
+}
+
+.button_row
+{
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+    padding:0.5rem;
+}
+
+.page_title
+{
+    color:#333;
+    font-size:3em;
+    padding:0;
+    margin:0 0 1rem;
+    font-weight:200;
+}
+
+.button
+{
+    display:flex;
+    justify-content:center;
+    align-items:stretch;
+    background:#333;
+    width:calc(25% - 1rem);
+    margin:0 0.5rem;
+    cursor:pointer;
+    color:#efefef;
+    text-decoration: none;
+    font-weight:200;
+    font-size:3vw;
+    border-radius:4px;
+    text-align:center;
+}
+.button:hover
+{
+    background:#222;
+}
+
+.button_blue{background-color: #007bff;}
+.button_blue:hover{background-color: #0069d9;}
+.button_yellow{background-color: #ffc107; color:#333;}
+.button_yellow:hover{background-color: #e0a800; color:#222;}
+.button_red{background-color: #dc3545;}
+.button_red:hover{background-color: #c82333;}
+.button_orange{background-color: #ffa500;}
+.button_orange:hover{background-color: #ee7600;}
+.button_green{background-color: #28a745;}
+.button_green:hover{background-color: #218838;}
+
+.button::before
+{
+    content:'';
+    display:table;
+    padding-top:100%;
+}
+.button_content
+{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+}
+.button_imagebox
+{
+    display:block;
+    position:relative;
+    width:25%;
+    padding-bottom:25%;
+    margin:0 0 1rem;
+}
+.button_image
+{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    height:100%;
+    width:100%;
+    object-fit:contain;
+    object-position:center center;
+    display:block;
+    transition:transform .3s ease;
+}
+.button:hover .button_image
+{
+    transform:scale(1.05) rotate(5deg);
+}
